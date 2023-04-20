@@ -1,3 +1,19 @@
+<?php
+// Include the database connection file
+include_once("config.php");
+
+// Fetch contacts (in descending order)
+$result = mysqli_query($mysqli, "SELECT * FROM respostas ORDER BY id DESC");
+if ($res) {
+    while ($row = mysqli_fetch_row($res)) {
+        print("Cod: ".$row[0]."\n");
+        print("Foto: ".$row[1]."\n");
+        print("Tipo: ".$row[2]."\n");
+        print("Cor: ".$row[3]."\n");
+      }
+ }
+
+?>
 <!doctype html>
 <html lang="pt-br">
 
