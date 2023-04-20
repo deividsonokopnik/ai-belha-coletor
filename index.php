@@ -29,14 +29,14 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
         // Fetch contacts (in descending order)
         $result = mysqli_query($mysqli, "SELECT * FROM respostas;")  or die (mysqli_error()); 
         if ($result) {
-            while ($row = mysqli_fetch_row($result) or die (mysqli_error())) {
-                echo("Cod: ".$row[0]."\n");
-                echo("Foto: ".$row[1]."\n");
-                echo("Tipo: ".$row[2]."\n");
-                echo("Cor: ".$row[3]."\n");
-            }
+//            while ($row = mysqli_fetch_row($result) or die (mysqli_error())) {
+                $row = mysqli_fetch_row($result) or die (mysqli_error();
+                echo("Cod: $row[0]\n");
+                echo("Foto: $row[1]\n");
+                echo("Tipo: $row[2]\n");
+                echo("Cor: $row[3]\n");
+//            }
          }
-
         ?>
 	</header>
 	<main>
