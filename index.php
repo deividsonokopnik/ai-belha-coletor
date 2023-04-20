@@ -19,7 +19,7 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
 		<h1>AI-belha - Coletor de Dados para Treinamento</h1>
 		<p>Esta é uma página para coleta de dados a ser utilizados para treinamento da Inteligência Artificial. </p>
         <?php
-        echo "Teste de Conexão com o Banco de Dados: \n";
+/*        echo "Teste de Conexão com o Banco de Dados: \n";
         // Fetch contacts (in descending order)
         $result = mysqli_query($mysqli, "SELECT * FROM respostas;")  or die (mysqli_error()); 
         if ($result) {
@@ -30,7 +30,7 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
                 echo("Tipo: $row[2]\n");
                 echo("Cor: $row[3]\n");
 //            }
-         }
+         } */
         ?>
 	</header>
 	<main>
