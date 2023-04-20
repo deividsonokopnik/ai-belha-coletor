@@ -2,7 +2,7 @@
 
 // Include the database connection file
 include_once("config.php");
-$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName) or die("Erro ao conectar ao banco de dados");
+$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName)  or die (mysqli_error()); 
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -26,7 +26,7 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
 		<p>Esta é uma página para coleta de dados a ser utilizados para treinamento da Inteligência Artificial. </p>
         <?php
         // Fetch contacts (in descending order)
-        $result = mysqli_query($mysqli, "SELECT * FROM respostas ORDER BY id DESC") or die("Erro ao selecionar os dados");
+        $result = mysqli_query($mysqli, "SELECT * FROM respostas;")  or die (mysqli_error()); 
         if ($res) {
             while ($row = mysqli_fetch_row($res)) {
                 print("Cod: ".$row[0]."\n");
