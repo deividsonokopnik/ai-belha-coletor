@@ -6,6 +6,4 @@ $databaseHost = 'localhost';
 $databaseUsername = 'usuario';
 $databasePassword = 'senha';
 $databaseName = 'database';
-
-// Connect to the database
 ?>
