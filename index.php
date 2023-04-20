@@ -2,18 +2,7 @@
 
 // Include the database connection file
 include_once("config.php");
-
-// Fetch contacts (in descending order)
-$result = mysqli_query($mysqli, "SELECT * FROM respostas ORDER BY id DESC");
-if ($res) {
-    while ($row = mysqli_fetch_row($res)) {
-        print("Cod: ".$row[0]."\n");
-        print("Foto: ".$row[1]."\n");
-        print("Tipo: ".$row[2]."\n");
-        print("Cor: ".$row[3]."\n");
-      }
- }
-
+$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName) or die("Erro ao conectar ao banco de dados");
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -35,6 +24,19 @@ if ($res) {
 	<header>
 		<h1>AI-belha - Coletor de Dados para Treinamento</h1>
 		<p>Esta é uma página para coleta de dados a ser utilizados para treinamento da Inteligência Artificial. </p>
+        <?php
+        // Fetch contacts (in descending order)
+        $result = mysqli_query($mysqli, "SELECT * FROM respostas ORDER BY id DESC") or die("Erro ao selecionar os dados");
+        if ($res) {
+            while ($row = mysqli_fetch_row($res)) {
+                print("Cod: ".$row[0]."\n");
+                print("Foto: ".$row[1]."\n");
+                print("Tipo: ".$row[2]."\n");
+                print("Cor: ".$row[3]."\n");
+            }
+         }
+
+        ?>
 	</header>
 	<main>
         <article id="text__paragraphs">
