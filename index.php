@@ -26,7 +26,7 @@ if ($res) {
 
 <body id="top">
 	<header>
-		<h1>AI-belha - Coletor de Dados para Treinamento</h1>
+		<h1>AIbelha - Coletor de Dados para Treinamento</h1>
 		<p>Esta é uma página para coleta de dados a ser utilizados para treinamento da Inteligência Artificial. </p>
 	</header>
 	<main>
