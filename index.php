@@ -25,11 +25,11 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
 		<h1>AI-belha - Coletor de Dados para Treinamento</h1>
 		<p>Esta é uma página para coleta de dados a ser utilizados para treinamento da Inteligência Artificial. </p>
         <?php
-        echo("Teste de Conexão com o Banco de Dados: \n");
+        echo "Teste de Conexão com o Banco de Dados: \n";
         // Fetch contacts (in descending order)
         $result = mysqli_query($mysqli, "SELECT * FROM respostas;")  or die (mysqli_error()); 
-        if ($res) {
-            while ($row = mysqli_fetch_row($res) or die (mysqli_error())) {
+        if ($result) {
+            while ($row = mysqli_fetch_row($result) or die (mysqli_error())) {
                 echo("Cod: ".$row[0]."\n");
                 echo("Foto: ".$row[1]."\n");
                 echo("Tipo: ".$row[2]."\n");
