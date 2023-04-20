@@ -8,12 +8,6 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
 <html lang="pt-br">
 
 <head>
-    <?php
-        header('Expires: Sun, 01 Jan 2014 00:00:00 GMT');
-        header('Cache-Control: no-store, no-cache, must-revalidate');
-        header('Cache-Control: post-check=0, pre-check=0', FALSE);
-        header('Pragma: no-cache');
-    ?>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>AI-belha - Coletor de Dados para Treinamento</title>
