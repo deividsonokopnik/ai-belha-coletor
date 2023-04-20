@@ -30,7 +30,7 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
         $result = mysqli_query($mysqli, "SELECT * FROM respostas;")  or die (mysqli_error()); 
         if ($result) {
 //            while ($row = mysqli_fetch_row($result) or die (mysqli_error())) {
-                $row = mysqli_fetch_row($result) or die (mysqli_error();
+                $row = mysqli_fetch_row($result) or die (mysqli_error());
                 echo("Cod: $row[0]\n");
                 echo("Foto: $row[1]\n");
                 echo("Tipo: $row[2]\n");
