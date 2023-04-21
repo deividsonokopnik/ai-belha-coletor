@@ -28,7 +28,7 @@ $foto="jatai-01.jpg";
                 $row = mysqli_fetch_row($result) or die (mysqli_error());
                 echo("Cod: $row[0]\n");
                 echo("Foto: $row[1]\n");
-                echo("Tipo: $row[2]\n");
+                echo("Tipo: $row[2]\n"); 
                 echo("Cor: $row[3]\n");
 //            }
          } */
