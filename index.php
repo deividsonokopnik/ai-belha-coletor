@@ -4,7 +4,7 @@
 include_once("config.php");
 $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName)  or die (mysqli_error()); 
 
-$foto="jatai-01.jpg";
+$_foto="jatai-01.jpg";
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -57,7 +57,7 @@ $foto="jatai-01.jpg";
                 nos ajudar a classificar, mais ajuda o projeto.
             </p>
             <h3>Imagem a ser Analizada:</h3>    
-        	<p><img src="fotos\<?php echo"$foto"?>" alt="Imagem a ser Analizada"></p>
+        	<p><img src="fotos\<?php echo"$_foto"?>" alt="Imagem a ser Analizada"></p>
             <section id="forms">
                 <header>
                     <h2>Características:</h2>
