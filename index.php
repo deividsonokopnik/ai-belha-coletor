@@ -3,6 +3,8 @@
 // Include the database connection file
 include_once("config.php");
 $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName)  or die (mysqli_error()); 
+
+$foto="jatai-01.jpg";
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -10,7 +12,7 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>AI-belha - Coletor de Dados para Treinamento</title>
+	<title>IA-belha - Coletor de Dados para Treinamento</title>
 	<link rel="stylesheet" href="simple.css">
 </head>
 
@@ -20,7 +22,6 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
 		<p>Esta é uma página para coleta de dados a ser utilizados para treinamento da Inteligência Artificial. </p>
         <?php
 /*        echo "Teste de Conexão com o Banco de Dados: \n";
-        // Fetch contacts (in descending order)
         $result = mysqli_query($mysqli, "SELECT * FROM respostas;")  or die (mysqli_error()); 
         if ($result) {
 //            while ($row = mysqli_fetch_row($result) or die (mysqli_error())) {
@@ -32,16 +33,16 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
 //            }
          } */
 
+        $foto = $_POST["foto"]; 
         $tipo_corpo = $_POST["tipo_corpo"];
         $cor_corpo = $_POST["cor_corpo"];
 
         if($tipo_corpo) {
-            echo "Tipo de Corpo: $tipo_corpo\n";
-        }
-        if($cor_corpo) {
-            echo "Cor do Corpo: $cor_corpo\n";
-        }
-
+            echo "Foto: $foto - Tipo: $tipo_corpo - Cor: $cor_corpo\n";
+            $result = mysqli_query($mysqli, "INSERT INTO respostas (foto, tipo_corpo, cor_corpo) VALUES ('$foto', '$tipo_corpo', '$cor_corpo');")  or die (mysqli_error());
+            if ($result) {
+                echo "Dados inseridos com sucesso!\n";
+            }
         ?>
 	</header>
 	<main>
@@ -55,7 +56,7 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
                 nos ajudar a classificar, mais ajuda o projeto.
             </p>
             <h3>Imagem a ser Analizada:</h3>    
-        	<p><img src="fotos\jatai-01.jpg" alt="Imagem a ser Analizada"></p>
+        	<p><img src="fotos\<?php echo"$foto"?>" alt="Imagem a ser Analizada"></p>
             <section id="forms">
                 <header>
                     <h2>Características:</h2>
@@ -75,6 +76,7 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
                     </ul>
 
                     <p>
+                        <input type="hidden" name="foto" value="<?php echo"$foto"?>">
                         <input type="submit" value="Submeter">
                         <input type="reset" value="Carregar Outra">
                     </p>
@@ -85,7 +87,7 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
     </main>
     
 	<footer>
-		<p>AI-belha. 2023.</p>
+		<p>IA-belha. 2023.</p>
 	</footer>
 </body>
 
