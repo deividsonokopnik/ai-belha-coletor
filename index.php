@@ -63,15 +63,15 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
     			<form action="index.php" method="post">
                     <p>Cor do Corpo</p>
                     <ul>
-                        <li><label for="radio1"><input id="radio1" name="tipo_corpo" type="radio" checked="checked"> Amarelada</label></li>
-                        <li><label for="radio2"><input id="radio2" name="tipo_corpo" type="radio"> Alaranjada</label></li>
-                        <li><label for="radio3"><input id="radio3" name="tipo_corpo" type="radio"> Escura</label></li>
-                        <li><label for="radio4"><input id="radio4" name="tipo_corpo" type="radio"> Preta</label></li>
+                        <li><label for="radio1"><input id="radio1" name="tipo_corpo" type="radio" value=1 checked="checked"> Amarelada</label></li>
+                        <li><label for="radio2"><input id="radio2" name="tipo_corpo" type="radio" value=2> Alaranjada</label></li>
+                        <li><label for="radio3"><input id="radio3" name="tipo_corpo" type="radio" value=3> Escura</label></li>
+                        <li><label for="radio4"><input id="radio4" name="tipo_corpo" type="radio" value=4> Preta</label></li>
                     </ul>
                     <p>Tipo do Corpo</p>
                     <ul>
-                        <li><label for="radio5"><input id="radio5" name="cor_corpo" type="radio" checked="checked"> Tipo 1 (Jatai)</label></li>
-                        <li><label for="radio6"><input id="radio6" name="cor_corpo" type="radio">  Tipo 2 (Mosca)</label></li>
+                        <li><label for="radio5"><input id="radio5" name="cor_corpo" type="radio" value=1 checked="checked"> Tipo 1 (Jatai)</label></li>
+                        <li><label for="radio6"><input id="radio6" name="cor_corpo" type="radio" value=2>  Tipo 2 (Mosca)</label></li>
                     </ul>
 
                     <p>
