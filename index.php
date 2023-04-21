@@ -43,6 +43,7 @@ $foto="jatai-01.jpg";
             if ($result) {
                 echo "Dados inseridos com sucesso!\n";
             }
+        }
         ?>
 	</header>
 	<main>
