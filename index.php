@@ -50,12 +50,17 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
                     <h2>Características:</h2>
                 </header>
     			<form>
+                    <p>Tipo do Corpo</p>
+                    <ul>
+                        <li><label for="radio1"><input id="radio1" name="tipo_corpo" type="radio" checked="checked"> Amarelada</label></li>
+                        <li><label for="radio2"><input id="radio2" name="tipo_corpo" type="radio"> Alaranjada</label></li>
+                        <li><label for="radio3"><input id="radio3" name="tipo_corpo" type="radio"> Escura</label></li>
+                        <li><label for="radio4"><input id="radio4" name="tipo_corpo" type="radio"> Preta</label></li>
+                    </ul>
                     <p>Cor do Corpo</p>
                     <ul>
-                        <li><label for="radio1"><input id="radio2" name="radio" type="radio" checked="checked"> Amarelada</label></li>
-                        <li><label for="radio2"><input id="radio3" name="radio" type="radio"> Alaranjada</label></li>
-                        <li><label for="radio3"><input id="radio3" name="radio" type="radio"> Escura</label></li>
-                        <li><label for="radio4"><input id="radio3" name="radio" type="radio"> Preta</label></li>
+                        <li><label for="radio5"><input id="radio5" name="cor_corpo" type="radio" checked="checked"> Tipo 1 (Jatai)</label></li>
+                        <li><label for="radio6"><input id="radio6" name="cor_corpo" type="radio">  Tipo 2 (Mosca)</label></li>
                     </ul>
 
                     <p>
