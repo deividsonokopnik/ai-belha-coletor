@@ -33,11 +33,11 @@ $foto="jatai-01.jpg";
 //            }
          } */
 
-        $foto = $_POST["foto"]; 
         $tipo_corpo = $_POST["tipo_corpo"];
-        $cor_corpo = $_POST["cor_corpo"];
 
         if($tipo_corpo) {
+            $foto = $_POST["foto"]; 
+            $cor_corpo = $_POST["cor_corpo"];
             echo "Foto: $foto - Tipo: $tipo_corpo - Cor: $cor_corpo\n";
             $result = mysqli_query($mysqli, "INSERT INTO respostas (foto, tipo_corpo, cor_corpo) VALUES ('$foto', '$tipo_corpo', '$cor_corpo');")  or die (mysqli_error());
             if ($result) {
